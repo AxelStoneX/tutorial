@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+   int gallons;
+   int liters;
+
+   cout << "Enter number of gallons\n";
+   cin  >> gallons;
+   liters = gallons * 4;
+   cout << "Number of liters is: " << liters << "\n";
+
+   return 0;
+
+}
