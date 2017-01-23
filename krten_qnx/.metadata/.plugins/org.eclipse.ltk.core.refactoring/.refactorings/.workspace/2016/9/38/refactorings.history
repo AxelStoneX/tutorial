@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 11 resources" deleteContents="false" description="Delete 11 resources" element1="/01_prioritization" element10="/10_resource_manager_carcass" element11="/11_directory_resource_manager" element2="/02_barriers" element3="/03_condvars" element4="/04_thread_pool" element5="/05_sendmsg" element6="/06_receivemsg" element7="/07_server_timeout" element8="/08_core_timeout" element9="/09_dev_null_manager" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="11" stamp="1473669224029"/>
+</session>

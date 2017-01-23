@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;10_resource_manager_carcass/io_read1.cc&apos; to &apos;10_io_read1.cc&apos;" description="Rename resource &apos;io_read1.cc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="io_read1.cc" name="10_io_read1.cc" stamp="1473329658304" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;10_resource_manager_carcass/io_devctl2.cc&apos; to &apos;10_io_devctl2.cc&apos;" description="Rename resource &apos;io_devctl2.cc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="io_devctl2.cc" name="10_io_devctl2.cc" stamp="1473342180647" updateReferences="true"/>
+</session>

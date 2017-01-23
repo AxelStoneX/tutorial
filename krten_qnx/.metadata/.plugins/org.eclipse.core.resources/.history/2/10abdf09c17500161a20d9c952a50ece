@@ -1,0 +1,47 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
+#include <sys/neutrino.h>
+#include <sys/iofunc.h>
+
+#define DCMD_AUDIO_SET_CHNNEL_MONO      1
+#define DCMD_AUDIO_SET_CHANNEL_STEREO   2
+#define DCMD_AUDIO_SET_SAMPLE_RATE_CD   3
+#define DCMD_AUDIO_SET_SAMPLE_RATE_DAT  4
+
+int io_devctl (resmgr_context_t *ctp, io_devctl_t *msg, iofunc_ocb_t *ocb)
+{
+    int sts;
+
+    // 1. Проверить, является ли это обычным POSIX-совместимым devctl()
+    if ((sts = iofunc_devctl_default (ctp, msg, ocb)) != (int) _RESMGR_DEFAULT)
+        return (sts);
+
+    // 2. Узнать, что за команда, и обработать ее
+    switch (msg -> i.dcmd)
+    {
+    case   DCMD_AUDIO_SET_CHANNEL_MONO:
+        audio_set_nchannels (1);
+        break;
+    case   DCMD_AUDIO_SET_CHANNEL_STEREO:
+        audio_set_nchannels (2);
+        break;
+    case   DCMD_AUDIO_SET_SAMPLE_RATE_CD:
+        audio_set_samplerate (44100);
+        break;
+    case   DCMD_AUDIO_SET_SAMPLE_RATE_DAT:
+        audio_set_samplerate (48000);
+        break;
+
+    // 3. Если мы не знаем такой команды, отвергнуть ее
+    default:
+        return (ENOSYS);
+    }
+
+    // 4. Сказать клиенту, что все отработано
+    memset (&msg -> o, 0, sizeof (msg -> o));
+    SETIOV (ctp -> iov, &msg -> o, sizeof (msg -> o));
+    return (_RESMGR_NPARTS (1));
+}

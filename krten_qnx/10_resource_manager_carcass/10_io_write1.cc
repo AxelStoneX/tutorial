@@ -1,0 +1,73 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/neutrino.h>
+#include <sys/iofunc.h>
+
+void process_data (int offset, void *buffer, int nbytes)
+{
+    // Сделать что-нибудь с данными
+}
+
+int io_write (resmgr_context_t *ctp, io_write_t *msg,
+              iofunc_ocb_t *ocb)
+{
+    int sts;
+    int nbytes;
+    int off;
+    int start_data_offset;
+    int xtype;
+    char *buffer;
+    struct _xtype_offset *xoffset;
+
+    // Проверить, открыто ли устройство на запись
+    if ((sts = iofunc_write_verify (ctp, msg, ocb, NULL)) != EOK )
+        return (sts);
+
+    // 1. Проверить и обработать переопределение XTYPE
+    xtype = msg -> i.xtype & _IO_XTYPE_MASK;
+    if (xtype == _IO_XTYPE_OFFSET)
+    {
+        xoffset = (struct _xtype_offset *) (&msg -> i + 1);
+        start_data_offset = sizeof (msg -> i) + sizeof(*xoffset);
+        off = xoffset -> offset;
+    } else if (xtype == _IO_XTYPE_NONE)
+    {
+        off = ocb -> offset;
+        start_data_offset = sizeof (msg -> i);
+    } else
+        return (ENOSYS);
+
+    // 2. Выделить достаточно большой буфер для данных
+    nbytes = msg -> i.nbytes;
+    if ((buffer = (char *) malloc (nbytes)) == NULL)
+        return (ENOMEM);
+
+    // 3. Считать данные от клиента (возможно, повторно)
+    if (resmgr_msgread (ctp, buffer, nbytes, start_data_offset) == -1)
+    {
+        free (buffer);
+        return (errno);
+    }
+
+    // 4. Сделать что-нибудь с данными
+    process_data (off, buffer, nbytes);
+
+    // 5. Освободить память буфера
+    free (buffer);
+
+    // 6. Установить, сколько байт должна возвращать клиентская функция "write"
+    _IO_SET_WRITE_NBYTES (ctp, nbytes);
+
+    // 7. Если данные записаны, обновить структуры данных POSIX и смещение OCB
+    if (nbytes)
+    {
+        ocb -> attr -> flags |= IOFUNC_ATTR_MTIME | IOFUNC_ATTR_DIRTY_TIME;
+        if (xtype == _IO_XTYPE_NONE)
+            ocb -> offset += nbytes;
+    }
+
+    // 8. Пусть библиотека сама ответит, что все в порядке
+    return (EOK);
+}
