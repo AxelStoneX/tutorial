@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs
+END
+main.use
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/main.use
+END
+c_link.c
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/c_link.c
+END
+m_main.c
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/m_main.c
+END
+utils.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/utils.c
+END
+m_version.c
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/m_version.c
+END
+tarfs_io_read.c
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/tarfs_io_read.c
+END
+io_read.c
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/io_read.c
+END
+c_unlink.c
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/c_unlink.c
+END
+c_open.c
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/c_open.c
+END
+c_mount.c
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/c_mount.c
+END
+c_rename.c
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/c_rename.c
+END
+m_main.use
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/m_main.use
+END
+c_mknod.c
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/c_mknod.c
+END
+attr.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/attr.c
+END
+tarfs.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/tarfs.c
+END
+cfs.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/cfs.h
+END
+io_write.c
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/io_write.c
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/main.c
+END
+tarfs.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/tarfs.h
+END
+dirent.c
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/dirent.c
+END
+version.c
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/version.c
+END
+debug.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/debug.c
+END
+c_readlink.c
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/c_readlink.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/Makefile
+END
+pathname.c
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/tarfs/pathname.c
+END

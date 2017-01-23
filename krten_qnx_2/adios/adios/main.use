@@ -1,0 +1,23 @@
+
+The ADIOS data acquision manager
+
+%C [options] device [device...]
+
+where [options] are optional parameters chosen from:
+    -n devicename  Name of the device to register (default "/dev/adios")
+    -p period      Scanning period (ms, default 100 ms)
+    -s shmemname   Name of shared memory region (default "/adios")
+    -S samples     Number of samples to be kept in shared memory (default 1000)
+    -v             verbose operation
+
+ADIOS (Analog / Digital I/O Server) is responsible for acquiring data
+from a number of data acquisition devices and presenting the data in
+shared memory organized as a ring buffer with a head and tail.
+
+The data acquisition devices are specified on the command line, giving
+the full path to each device.  For example:
+
+    adios /dev/pcl711*
+
+will start the adios server and bind all existing pcl711 devices.
+

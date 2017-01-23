@@ -1,0 +1,49 @@
+8
+
+dir
+655918
+http://svn.ott.qnx.com/product/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys
+http://svn.ott.qnx.com/product
+
+
+
+2012-03-06T21:28:01.004679Z
+641506
+stever@qnx.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9325dad8-5e30-0410-b832-835969cf98dd
+
+tarfs
+dir
+
+lib
+dir
+
+ramdisk
+dir
+
+Makefile
+file
+
+
+
+
+2012-04-20T19:56:09.000000Z
+c2d5a5c15509a79a7a901244578b7b47
+2011-12-13T14:37:12.819919Z
+616621
+stever@qnx.com
+

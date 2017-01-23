@@ -1,0 +1,33 @@
+
+The TARFS .tar filesystem
+
+%C [options] arguments
+
+where [options] are optional parameters chosen from:
+    -d             debug operation
+    -v             verbose operation
+
+This is a virtual filesystem that manifests a .tar file as a set of
+directories and files, allowing you to "cd" and "cat" files out
+of the .tar file without having to unpack it first.
+
+Note that the tar filesystem supports compressed files.
+
+As root:
+# tarfs &
+
+This starts the tar filesystem.  Now you need to mount a .tar file
+for use.  You must give the FULL PATH to the .tar file.  So, let's
+assume that your .tar file is in /home/root/spud.tar, and you'd
+like to mount that as /home/root/spud.tar.dir:
+
+# cd /home/root
+# mount -T tarfs /home/root/spud.tar spud.tar.dir
+# cd spud.tar.dir
+# ls
+<contents of .tar file magically show up here>
+
+Note that the full path is required only for the .tar file itself; the
+mountpoint can be relative or absolute.
+
+Enjoy!

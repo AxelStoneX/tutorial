@@ -1,0 +1,41 @@
+
+The TARFS .tar helper (mount_tarfs)
+
+%C [options] source target
+%C [options] -m source [source...]
+
+where [options] are optional parameters chosen from:
+    -v             verbose operation
+
+This program can be used with the "mount" command (this is done
+automatically by the mount command itself), or standalone.
+
+Its job is to issue the mount command to the tar filesystem.
+
+If used implicitly by the mount command, all you need to worry
+about is the mount command itself:
+
+    mount -T tarfs source.tar[.gz] [dirname]
+
+This will mount the source tar file (which can be compressed) as
+"dirname" (if "dirname" isn't specified, there are defaults, see
+below).
+
+If used standalone, the options are similar:
+
+    mount_tarfs source.tar[.gz] [dirname]
+
+The real advantage, though, of using this in standalone mode is
+the ability to mount multiple tar filesystems with one command
+line, for example:
+
+    mount_tarfs -m *.tar.gz
+
+This will mount all compressed tar files into their default mountpoints.
+
+The extensions ".tar", ".tar.gz", and ".tgz" are all changed to ".dir"
+(well... ".tar.gz" is actually changed to ".tar.dir").
+
+Any filenames that don't have the above-listed extensions will have
+".dir" ADDED to their names.
+

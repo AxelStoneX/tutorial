@@ -1,0 +1,81 @@
+
+The tag utility
+
+%C [options] tag [tag...]
+
+where [options] are optional parameters chosen from:
+    -c config      name of configuration file (default searches in
+                   current directory for "adios.cfg" and then in
+                   "/etc/adios.cfg")
+    -m period      monitor tag(s) at set period in milliseconds (default
+                   is no monitoring).
+    -v             verbose operation
+
+The tag utility allows the display, monitoring, and setting of tags.
+
+To display a tag named "sample":
+
+    tag sample
+
+To display a tag named "sample", "spud", and "jimbo" every 100 milliseconds:
+
+    tag -m100 sample spud jimbo
+
+To display all tags that match the wildcard pattern "spud*" (e.g.,
+"spud1", "spud2", "spud_out", etc.):
+
+    tag "spud*"
+
+(Note the use of the double quotes to prevent the shell from attempting to
+expand "spud*" into all *FILES* that match the wildcard pattern.  If there
+are no files that match, you can omit the double quotes.)
+
+To set values, one or two equals signs are placed after the tag name.
+If one equals sign is used, then the value is scaled and shifted according
+to the span keyword.  If two equals signs are used, then the raw value is
+sent.
+
+For example, if the configuration file contains a span directive of "-5,+5",
+it implies that the range for the data point is between -5 and +5.
+
+To set the value of spud to 1.28 ("units" -- as determined by "span" keyword
+in the configuration file):
+
+    tag spud=1.28
+
+In our example above (with the span "-5,+5"), the value of 1.28 on a 12-bit
+digital to analog converter would be 2572, as derived by the equation
+below:
+
+    raw_value = (converted_value - span_low) / (span_high - span_low) * 4095
+              = (1.28 - (-5)) / (5 - (-5)) * 4095
+              = (1.28 + 5) / (10) * 4095
+              = 6.28 / 10 * 4095
+              = 0.628 * 4095
+              = 2572
+
+To set the value of spud to 2572 (raw value):
+
+    tag spud==2572
+
+Both "tag spud=1.28" and "tag spud==2572" will produce identical results.
+
+To set the value of spud and jimbo to 5:
+
+    tag spud=5 jimbo=5
+
+(Note that we don't support the C syntax of "spud=jimbo=5")
+
+You can combine monitoring or displaying with setting.  All of the
+setting tags are processed first, in the order given on the command
+line, and then the display/monitor tags are processed (again in
+order of the command line).  For example:
+
+    tag -m100 oven=5 spud door=0
+
+Will set the value of the tag "oven" to "5", "door" to "0", and then
+monitor "spud" every 100 milliseconds.  Removing the "-m100" would
+only show "spud" once, after "oven" and "door" have been set.
+
+Note that a configuration file is required for this utility.
+

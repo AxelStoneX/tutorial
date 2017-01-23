@@ -1,0 +1,69 @@
+
+The SIM-000 Driver
+
+%C [options] arguments
+
+where [options] are optional parameters chosen from:
+    -c config      name of configuration file (default searches in
+                   current directory for "adios.cfg" and then in
+                   "/etc/adios.cfg")
+    -n devicename  Name of the device to register (default "/dev/sim000-<port>")
+    -p port        Hexadecimal base port of the device (default 0x2D0), can
+                   be specified multiple times for multiple devices
+    -v             verbose operation
+    -0             default output value is 0 (default)
+    -1             default output value is 1
+
+This is a simulator driver.  It will manifest a name for the device in the
+form /dev/sim000-<port>, where "<port>" is replaced with the four digit
+lowercase hexadecimal base address of the SIM-000's control I/O port.
+Note that the port number isn't really used for any hardware control with
+the simulator, it's just there for uniquely identifying instances of the
+simulator.  For example, specifying:
+
+    sim000 -p370 -p380
+
+indicates that there are two SIM-000 simulated "cards"; the first is installed
+at "port" 370 and will be given the device name /dev/sim000-0370, and the second
+is installed at "port" 380 and will be given the device name /dev/sim000-0380.
+
+Note that this is a simulated device only, and doesn't require any hardware.
+
+The interaction of the -n and -p options is such that the -p option captures
+whatever -n option had been in effect and erases the -p option value.
+
+For example:
+
+    sim000 -p200 -n/dev/spud -p300 -p400 -n/dev/xyz -p500 -p600
+
+Will create 5 devices (one for each -p option).  The devices will
+be:
+
+    Port    Device Name
+    ----    -----------
+    0x200   /dev/sim000-0200
+    0x300   /dev/spud
+    0x400   /dev/sim000-0400
+    0x500   /dev/xyz
+    0x600   /dev/sim000-0600
+
+Generally, it is recommended to not use the -n option unless there is a
+special requirement to do so.
+
+If no -p is specified, then one device at port 0x2d0 is assumed.  If any
+-p options are specified then ONLY THOSE DEVICES are assumed.  I.e.:
+
+    sim000 -p300
+
+assumes that there is exactly one device, and that it is at port 0x300.  On
+the other hand:
+
+    sim000
+
+assumes that there is exactly one device as well, and that it is at port 0x2d0
+(the default).
+
+Generally, you'd run the sim000 program in the background:
+
+    sim000 &
+

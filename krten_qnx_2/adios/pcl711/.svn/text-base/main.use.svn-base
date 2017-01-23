@@ -1,0 +1,70 @@
+
+The PCL-711 Driver
+
+%C [options] arguments
+
+where [options] are optional parameters chosen from:
+    -c config      name of configuration file (default searches in
+                   current directory for "adios.cfg" and then in
+                   "/etc/adios.cfg")
+    -n devicename  Name of the device to register (default "/dev/pcl711-<port>")
+    -p port        Hexadecimal base port of the device (default 0x2D0), can
+                   be specified multiple times for multiple devices
+    -v             verbose operation
+    -0             default output value is 0 (default)
+    -1             default output value is 1
+
+This is the device driver for the PCL-711 board.  It will manifest a
+name for the device in the form /dev/pcl711-<port>, where "<port>"
+is replaced with the four digit lowercase hexadecimal base address of
+the PCL-711's control I/O port.  For example, specifying:
+
+    pcl711 -p370 -p380
+
+indicates that there are two PCL-711 cards; the first is installed at ports
+370 through 37F (hex) and will be given the device name /dev/pcl711-0370,
+and the second is installed at ports 380 through 38F and will be given the
+device name /dev/pcl711-0380.
+
+Note that the PCL-711 device is an 8-bit ISA card.
+
+The interaction of the -n and -p options is such that the -p option captures
+whatever -n option had been in effect and erases the -p option value.
+
+For example:
+
+    pcl711 -p200 -n/dev/spud -p300 -p400 -n/dev/xyz -p500 -p600
+
+Will create 5 devices (one for each -p option).  The devices will
+be:
+
+    Port    Device Name
+    ----    -----------
+    0x200   /dev/pcl711-0200
+    0x300   /dev/spud
+    0x400   /dev/pcl711-0400
+    0x500   /dev/xyz
+    0x600   /dev/pcl711-0600
+
+Generally, it is recommended to not use the -n option unless there is a
+special requirement to do so.
+
+If no -p is specified, then one device at port 0x2d0 is assumed.  If any
+-p options are specified then ONLY THOSE DEVICES are assumed.  I.e.:
+
+    pcl711 -p300
+
+assumes that there is exactly one device, and that it is at port 0x300.  On
+the other hand:
+
+    pcl711
+
+assumes that there is exactly one device as well, and that it is at port 0x2d0
+(the default).
+
+Generally, you'd run the pcl711 program in the background:
+
+    pcl711 &
+
+BEWARE! The switch settings look backwards on the card -- 0 is "ON" and 1 is
+"OFF" for the address selections :-)

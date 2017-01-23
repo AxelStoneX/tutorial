@@ -1,0 +1,13 @@
+
+The showsamp utility.
+
+%C [options] arguments
+
+where [options] are optional parameters chosen from:
+    -n numsamp     number of samples to dump (default 5)
+    -s shmemname   name of shared memory region (default /adios)
+    -v             verbose operation
+
+The showsamp utility dumps out the last "numsamp" samples from the shared
+memory region maintained by ADIOS.
+

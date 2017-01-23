@@ -1,0 +1,11 @@
+
+The /proc dumper utility
+
+%C [options] arguments
+
+where [options] are optional parameters chosen from:
+    -v             verbose operation
+
+Dumps every last thing it can from the /proc filesystem.
+It illustrates how to fetch entries from /proc.
+

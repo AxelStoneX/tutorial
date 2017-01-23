@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/lib
+END
+client.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/lib/client.c
+END
+parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/lib/parser.h
+END
+client.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/lib/client.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/lib/Makefile
+END
+parser.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/lib/parser.c
+END

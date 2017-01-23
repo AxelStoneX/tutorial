@@ -1,0 +1,43 @@
+
+The RAMDISK
+
+%C [options] arguments
+
+where [options] are optional parameters chosen from:
+    -m maxram      Maximum size of RAM to allow to be dynamically allocated
+    -M maxram      Maximum size of RAM (allocated at startup)
+    -n devicename  Name of the special device to register (default "/dev/ramdisk")
+    -t             show timing information
+    -v             verbose operation
+
+An example of a RAM-disk.
+
+The -m and -M options are mutually exclusive (and optional).  If neither is
+specified, then the ramdisk can grow to consume all available memory (which
+is probably not a good idea :-)).  A value can be specified as:
+
+    number         the number of bytes
+    numberk        the number of kilobytes (x 1024)
+    numberM        the number of megabytes (x 1048576)
+
+Floating point is accepted.  If a number is specified with -m, it means
+that the ramdisk will not grow past that size.  As the files on the ramdisk
+grow, the ramdisk will occupy more and more (up to the maximum) memory.
+If a number is specified with -M, it means that the ramdisk is pregrown to
+that maximum amount.
+
+Note that in either the -m or -M case, certain control structures may still
+be allocated over and above the given maximum.
+
+The minimum ramdisk size is 4k.
+
+TEMPORARY NOTES:
+As of 0.755 a change was made in the way mountpoints work.  The ramdisk will
+mount itself as a special named file, default /dev/ramdisk.  You must use
+the "mount" command to install one or more ramdisk mountpoints whereever
+you like.  For example:  "mount -T ramdisk /dev/ramdisk /ramdisk" will install
+a ramdisk at "/ramdisk".  Currently, the size limits (-m and -M) apply to
+the *entire* ramdisk, no matter how many you mount (i.e., sum of all memory for
+all mounted ramdisks will not exceed -m/-M limits).  Plans are afoot to make
+a "-om=" and "-oM=" mount option that will limit the *per-mountpoint* size of
+the ramdisk, but this is not yet implemented.

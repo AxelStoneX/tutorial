@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813
+END
+main.use
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/main.use
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/main.c
+END
+version.c
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/version.c
+END
+iofuncs.c
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/iofuncs.c
+END
+iso813.c
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/iso813.c
+END
+iofuncs.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/iofuncs.h
+END
+iso813.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/iso813.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/Makefile
+END
+adios.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/iso813/adios.cfg
+END

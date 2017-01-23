@@ -1,0 +1,61 @@
+
+The Webcounter Utility Phase III
+
+%C [options] arguments
+
+where [options] are optional parameters chosen from:
+    -b rrggbb      Background colour, hex red/green/blue (default 000000)
+    -d ndigits     Number of digits (default 6)
+    -f rrggbb      Foreground colour, hex red/green/blue (default ff0000)
+    -n devicename  Name of directory to register (default "/dev/webcounters")
+    -N numctrs     Number of counters to support (default 100)
+    -r renderstyle Select the render style (default "7seg", see below)
+    -s startcount  Starting count for ALL counters (default 0)
+    -S startfile   Fetch (and save) start count as 4 byte native-endian value
+                   from/to file <startfile>. (no default, assume -s0)
+    -x xsize       Size of generated graphic (x axis) (default <ndigits>*10)
+    -y ysize       Size of generated graphic (y axis) (default 20)
+    -v             verbose operation
+
+This is the Webcounter Utility Phase III.
+
+It has the same basic functionality as the Phase II version, but includes
+the following enhancements:
+
+Support for multiple counters, the -n parameter is now interpreted as a
+directory name, and -N controls how many counters are implemented.
+The startfiles are not compatible with phase I or II.
+
+Original functionality of Phase II
+----------------------------------
+Ability to select the rendering function (use the -r, and give it either
+"7seg" or "8x8" -- you can easily add more).
+
+Added ability to have .txt extensions where you can get the ASCII value
+of the counter.
+
+Added ability to write to the .txt (or .gif) file to set an ASCII value.
+
+Original functionality of Phase I
+---------------------------------
+
+Simply running it will create a file that can be incorporated into a webpage.
+When read, the counter will increment by one.
+
+If a "-S startfile" is specified, and it exists, the initial value of the
+counter will be read from the startfile file.  If it does not exist, then
+the initial value is assumed to be zero.  Whenever the counter is incremented,
+the value in the startfile is incremented as well.
+If "-s startcount" is used, then the start value is set to startcount.
+"-s" overrides "-S" and can therefore be used to seed the startfile with a
+given count:
+
+    webcounter -s3000 -S /etc/myvalue.dat
+
+Starts the webcounter with an initial value of 3000, ignores the value in
+/etc/myvalue.dat, but updates it whenever the counter is incremented.
+
+For simplicity, the initial "font" is a simple 7-segment LED-style display.
+Since we're simulating an LED, we use the traditional red colouring in the
+foreground colour.
+

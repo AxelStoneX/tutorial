@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib
+END
+block.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/block.h
+END
+cfs.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/cfs.h
+END
+io_space.c
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/io_space.c
+END
+mpool.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/mpool.c
+END
+cfs_attr_init.c
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/cfs_attr_init.c
+END
+io_devctl.c
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/io_devctl.c
+END
+cfs_func_init.c
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/cfs_func_init.c
+END
+block.c
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/block.c
+END
+mpool.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/mpool.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/Makefile
+END
+io_close.c
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/fsys/lib/io_close.c
+END

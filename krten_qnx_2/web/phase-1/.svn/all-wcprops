@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web/phase-1
+END
+main.use
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web/phase-1/main.use
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web/phase-1/main.c
+END
+7seg.c
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web/phase-1/7seg.c
+END
+version.c
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web/phase-1/version.c
+END
+7seg.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web/phase-1/7seg.h
+END
+gif.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web/phase-1/gif.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/product/!svn/ver/647957/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web/phase-1/Makefile
+END

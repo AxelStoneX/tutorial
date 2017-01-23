@@ -1,0 +1,52 @@
+8
+
+dir
+655918
+http://svn.ott.qnx.com/product/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/adios/api
+http://svn.ott.qnx.com/product
+
+
+
+2012-03-06T21:28:01.004679Z
+641506
+stever@qnx.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9325dad8-5e30-0410-b832-835969cf98dd
+
+api.h
+file
+
+
+
+
+2012-04-20T19:55:50.000000Z
+128f92afd99fe5ebaedf47409c4349ab
+2012-03-06T21:28:01.004679Z
+641506
+stever@qnx.com
+
+driver.h
+file
+
+
+
+
+2012-04-20T19:55:50.000000Z
+9a2dadd6799589cc37dea45bc1d88686
+2012-03-06T21:28:01.004679Z
+641506
+stever@qnx.com
+

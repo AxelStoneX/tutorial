@@ -1,0 +1,49 @@
+8
+
+dir
+655918
+http://svn.ott.qnx.com/product/branches/6.5.0/SP1/doc/qnx6_en/cookbook_cdrom/src/text/web
+http://svn.ott.qnx.com/product
+
+
+
+2012-03-06T21:28:01.004679Z
+641506
+stever@qnx.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9325dad8-5e30-0410-b832-835969cf98dd
+
+phase-2
+dir
+
+phase-3
+dir
+
+Makefile
+file
+
+
+
+
+2012-04-20T19:56:20.000000Z
+b5015e7092bd36d92ff8c6b3bfa18e57
+2012-03-06T16:18:48.333285Z
+641438
+stever@qnx.com
+
+phase-1
+dir
+
