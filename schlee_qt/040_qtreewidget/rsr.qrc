@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/rsr">
+        <file>drive.jpg</file>
+        <file>folder.png</file>
+    </qresource>
+</RCC>

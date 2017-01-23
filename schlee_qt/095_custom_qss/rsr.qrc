@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>btn.png</file>
+        <file>btnhvd.png</file>
+        <file>btnprs.png</file>
+        <file>simple.qss</file>
+    </qresource>
+</RCC>

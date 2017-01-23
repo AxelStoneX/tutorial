@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Linux.svg</file>
+    </qresource>
+    <qresource prefix="/prefix">
+        <file>Linux.svg</file>
+    </qresource>
+</RCC>

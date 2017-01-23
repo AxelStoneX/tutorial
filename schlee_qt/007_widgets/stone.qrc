@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/rsr">
+        <file>stone.jpg</file>
+    </qresource>
+</RCC>

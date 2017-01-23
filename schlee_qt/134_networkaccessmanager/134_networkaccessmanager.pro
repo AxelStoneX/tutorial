@@ -1,0 +1,25 @@
+#-------------------------------------------------
+#
+# Project created by QtCreator 2016-10-18T15:25:24
+#
+#-------------------------------------------------
+
+QT       += core gui\
+            network
+
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+TARGET = 134_networkaccessmanager
+TEMPLATE = app
+
+
+SOURCES += main.cpp\
+        mainwindow.cpp \
+    Downloader.cpp \
+    DownloaderGui.cpp
+
+HEADERS  += mainwindow.h \
+    Downloader.h \
+    DownloaderGui.h
+
+FORMS    += mainwindow.ui
